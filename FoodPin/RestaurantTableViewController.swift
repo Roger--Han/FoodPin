@@ -114,22 +114,22 @@ class RestaurantTableViewController: UITableViewController {
         optionMenu.addAction(callAction)
         
         // Check-in action, using another closure
-        let checkInAction = UIAlertAction(title: "Check in", style: .default, handler: {
+        let titleForCheckIn = restaurantIsVisited[indexPath.row] ? "Undo Check in" : "Check in"
+        let checkInAction = UIAlertAction(title: titleForCheckIn, style: .default, handler: {
             (action:UIAlertAction!) -> Void in
             let cell = tableView.cellForRow(at: indexPath)
-            cell?.accessoryType = .checkmark
-            self.restaurantIsVisited[indexPath.row] = true
+            
+            // Toggle check-in and undo-check-in
+            self.restaurantIsVisited[indexPath.row] = self.restaurantIsVisited[indexPath.row] ? false : true
+            cell?.accessoryType = self.restaurantIsVisited[indexPath.row] ? .checkmark : .none
         })
         
         optionMenu.addAction(checkInAction)
         
-        
-        
         // Display the menu
-        present(optionMenu, animated: true, completion: nil)
         tableView.deselectRow(at: indexPath, animated: true)
-        
-    
+        present(optionMenu, animated: true, completion: nil)
+
     }
  
 
