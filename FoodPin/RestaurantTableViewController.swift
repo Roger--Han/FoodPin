@@ -27,6 +27,7 @@ class RestaurantTableViewController: UITableViewController {
     
     var restaurantTypes = ["Coffee & Tea Shop", "Cafe", "Tea House", "Austrian / Causual Drink", "French", "Bakery", "Bakery", "Chocolate", "Cafe", "American / Seafood", "American", "American", "Breakfast & Brunch", "Coffee & Tea", "Coffee& Tea", "Latin American", "Spanish", "Spanish", "Spanish", "British", "Thai"]
     
+    var restaurantIsVisited = Array(repeating: false, count: 21)
     
 
     override func viewDidLoad() {
@@ -69,6 +70,16 @@ class RestaurantTableViewController: UITableViewController {
         cell.typeLabel.text = restaurantTypes[indexPath.row]
         cell.thumbnailImageView.layer.cornerRadius = 30.0
         cell.thumbnailImageView.clipsToBounds = true
+        
+//        if restaurantIsVisited[indexPath.row] {
+//            cell.accessoryType = .checkmark
+//        } else {
+//            cell.accessoryType = .none
+//        }
+        
+        // or use the ternary conditional operator
+        
+        cell.accessoryType = restaurantIsVisited[indexPath.row] ? .checkmark : .none
 
         // Configure the cell...
         
@@ -99,9 +110,18 @@ class RestaurantTableViewController: UITableViewController {
             self.present(alertMessage, animated: true, completion: nil)
         }
             
-            let callAction = UIAlertAction(title: "Call" + "123-000-\(indexPath.row)", style: .default, handler:callActionHandler)
-            
-            optionMenu.addAction(callAction)
+        let callAction = UIAlertAction(title: "Call" + "123-000-\(indexPath.row)", style: .default, handler:callActionHandler)
+        optionMenu.addAction(callAction)
+        
+        // Check-in action, using another closure
+        let checkInAction = UIAlertAction(title: "Check in", style: .default, handler: {
+            (action:UIAlertAction!) -> Void in
+            let cell = tableView.cellForRow(at: indexPath)
+            cell?.accessoryType = .checkmark
+            self.restaurantIsVisited[indexPath.row] = true
+        })
+        
+        optionMenu.addAction(checkInAction)
         
         
         
