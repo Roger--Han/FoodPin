@@ -133,13 +133,13 @@ class RestaurantTableViewController: UITableViewController {
     }
  
 
-    /*
+    
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         // Return false if you do not want the specified item to be editable.
         return true
     }
-     */
+ 
  
     
     override func tableView(_ tableView: UITableView, editActionsForRowAt
@@ -149,8 +149,12 @@ class RestaurantTableViewController: UITableViewController {
         let shareAction = UITableViewRowAction(style: .default, title: "Share", handler: {
             (action, indexPath) -> Void in
                 let defaultText = "Just checking in at " + self.restaurantNames[indexPath.row]
-                let activityController = UIActivityViewController(activityItems:[defaultText], applicationActivities:nil)
-                self.present(activityController, animated: true, completion: nil)
+            
+                if let imageToShare = UIImage(named: self.restaurantImages[indexPath.row]){
+                    let activityController = UIActivityViewController(activityItems:[defaultText, imageToShare], applicationActivities:nil)
+                    self.present(activityController, animated: true, completion: nil)
+                }
+            
             
             })
         
@@ -167,6 +171,9 @@ class RestaurantTableViewController: UITableViewController {
         
         })
         
+        shareAction.backgroundColor = UIColor(red: 48.0/255.0, green: 173.0/255/0, blue: 99.0/255.0, alpha: 1.0)
+        deleteAction.backgroundColor = UIColor(red: 202.0/255.0, green: 202.0/255.0, blue: 203.0/255.0, alpha: 1.0)
+        
         return [deleteAction, shareAction]
     
     }
@@ -175,6 +182,10 @@ class RestaurantTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             // Delete the row from the data source
+            // three steps for deleting with exactly same order
+            // 1. check the even is delete or insert or none,
+            // 2. detele the item from the data source, remove the objects
+            // 3.call deleteRows(at:) on the table view
             
             restaurantNames.remove(at: indexPath.row)
             restaurantLocations.remove(at: indexPath.row)
@@ -187,7 +198,7 @@ class RestaurantTableViewController: UITableViewController {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }
         //tableView.reloadData()
-        tableView.deleteRows(at: [indexPath], with: .bottom)
+        tableView.deleteRows(at: [indexPath], with: .fade)
         print("number of restaurant \(restaurantNames.count)")
     }
     
