@@ -23,9 +23,8 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
         
         restaurantImageView.image = UIImage(named: restaurant.image)
         tableView.backgroundColor = UIColor(red: 240.0/255.0, green: 240.0/255.0, blue: 240.0/255.0, alpha: 0.2)
-
-       
         
+        title = restaurant.name
         
     }
     
@@ -65,6 +64,9 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
+    
     
 
     /*
