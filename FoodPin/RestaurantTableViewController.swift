@@ -178,29 +178,30 @@ class RestaurantTableViewController: UITableViewController {
     
     }
     
+    
     // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            // three steps for deleting with exactly same order
-            // 1. check the even is delete or insert or none,
-            // 2. detele the item from the data source, remove the objects
-            // 3.call deleteRows(at:) on the table view
-            
-            restaurantNames.remove(at: indexPath.row)
-            restaurantLocations.remove(at: indexPath.row)
-            restaurantTypes.remove(at: indexPath.row)
-            restaurantImages.remove(at: indexPath.row)
-            restaurantIsVisited.remove(at: indexPath.row)
-            
-        }
-        else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }
-        //tableView.reloadData()
-        tableView.deleteRows(at: [indexPath], with: .fade)
-        print("number of restaurant \(restaurantNames.count)")
-    }
+//    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+//        if editingStyle == .delete {
+//            // Delete the row from the data source
+//            // three steps for deleting with exactly same order
+//            // 1. check the even is delete or insert or none,
+//            // 2. detele the item from the data source, remove the objects
+//            // 3.call deleteRows(at:) on the table view
+//            
+//            restaurantNames.remove(at: indexPath.row)
+//            restaurantLocations.remove(at: indexPath.row)
+//            restaurantTypes.remove(at: indexPath.row)
+//            restaurantImages.remove(at: indexPath.row)
+//            restaurantIsVisited.remove(at: indexPath.row)
+//            
+//        }
+//        else if editingStyle == .insert {
+//            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+//        }
+//        //tableView.reloadData()
+//        tableView.deleteRows(at: [indexPath], with: .fade)
+//        print("number of restaurant \(restaurantNames.count)")
+//    }
     
 
     /*
