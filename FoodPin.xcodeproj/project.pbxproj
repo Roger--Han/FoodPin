@@ -14,6 +14,7 @@
 		DB8187ED1DBCCBA700932FA1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB8187EB1DBCCBA700932FA1 /* LaunchScreen.storyboard */; };
 		DB8187F51DBCCC1700932FA1 /* RestaurantTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8187F41DBCCC1700932FA1 /* RestaurantTableViewController.swift */; };
 		DB8187F71DBCD7FB00932FA1 /* RestaurantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8187F61DBCD7FB00932FA1 /* RestaurantTableViewCell.swift */; };
+		DBE0AA011DC0B04A008D36C7 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE0AA001DC0B04A008D36C7 /* Restaurant.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		DB8187EE1DBCCBA700932FA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DB8187F41DBCCC1700932FA1 /* RestaurantTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewController.swift; sourceTree = "<group>"; };
 		DB8187F61DBCD7FB00932FA1 /* RestaurantTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewCell.swift; sourceTree = "<group>"; };
+		DBE0AA001DC0B04A008D36C7 /* Restaurant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,7 +45,6 @@
 			isa = PBXGroup;
 			children = (
 				DB8187E11DBCCBA600932FA1 /* FoodPin */,
-				DB8187E01DBCCBA600932FA1 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -53,6 +54,7 @@
 				DB8187DF1DBCCBA600932FA1 /* FoodPin.app */,
 			);
 			name = Products;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		DB8187E11DBCCBA600932FA1 /* FoodPin */ = {
@@ -62,6 +64,8 @@
 				DB8187F41DBCCC1700932FA1 /* RestaurantTableViewController.swift */,
 				DB8187F61DBCD7FB00932FA1 /* RestaurantTableViewCell.swift */,
 				61D16A2D1DC04EB400716398 /* RestaurantDetailViewController.swift */,
+				DBE0AA001DC0B04A008D36C7 /* Restaurant.swift */,
+				DB8187E01DBCCBA600932FA1 /* Products */,
 				DB8187E61DBCCBA700932FA1 /* Main.storyboard */,
 				DB8187E91DBCCBA700932FA1 /* Assets.xcassets */,
 				DB8187EB1DBCCBA700932FA1 /* LaunchScreen.storyboard */,
@@ -142,6 +146,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBE0AA011DC0B04A008D36C7 /* Restaurant.swift in Sources */,
 				DB8187F51DBCCC1700932FA1 /* RestaurantTableViewController.swift in Sources */,
 				DB8187F71DBCD7FB00932FA1 /* RestaurantTableViewCell.swift in Sources */,
 				61D16A2E1DC04EB500716398 /* RestaurantDetailViewController.swift in Sources */,
