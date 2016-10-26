@@ -64,6 +64,7 @@
                                     <outlet property="nameLabel" destination="egc-Fj-PBm" id="b5F-JP-exW"/>
                                     <outlet property="thumbnailImageView" destination="lhU-rb-HHj" id="QdC-H0-gS4"/>
                                     <outlet property="typeLabel" destination="mFf-TB-tf0" id="CgV-vx-z26"/>
+                                    <segue destination="ddR-JN-UGa" kind="show" identifier="showRestaurantDetail" id="njM-Nd-CXj"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -78,10 +79,10 @@
             </objects>
             <point key="canvasLocation" x="656.79999999999995" y="28.335832083958024"/>
         </scene>
-        <!--View Controller-->
+        <!--Restaurant Detail View Controller-->
         <scene sceneID="j89-st-0QA">
             <objects>
-                <viewController id="ddR-JN-UGa" sceneMemberID="viewController">
+                <viewController id="ddR-JN-UGa" customClass="RestaurantDetailViewController" customModule="FoodPin" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xgq-VI-pW7"/>
                         <viewControllerLayoutGuide type="bottom" id="CUT-Ga-CWA"/>
@@ -100,6 +101,9 @@
                             <constraint firstAttribute="trailing" secondItem="J1H-mg-iHN" secondAttribute="trailing" id="i9A-bc-UTO"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="restaurantImageView" destination="J1H-mg-iHN" id="Za1-6p-bBz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="46m-tQ-d4L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
