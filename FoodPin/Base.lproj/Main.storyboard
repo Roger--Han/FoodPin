@@ -166,7 +166,7 @@
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" image="check"/>
                                 <connections>
-                                    <segue destination="yps-Od-mvm" kind="showDetail" id="DNp-Ph-vtD"/>
+                                    <segue destination="yps-Od-mvm" kind="showDetail" identifier="showReview" id="DNp-Ph-vtD"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -189,10 +189,10 @@
             </objects>
             <point key="canvasLocation" x="1460" y="29.23538230884558"/>
         </scene>
-        <!--View Controller-->
+        <!--Review View Controller-->
         <scene sceneID="lzH-s0-TA8">
             <objects>
-                <viewController id="yps-Od-mvm" sceneMemberID="viewController">
+                <viewController id="yps-Od-mvm" customClass="ReviewViewController" customModule="FoodPin" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="des-5r-se4"/>
                         <viewControllerLayoutGuide type="bottom" id="mzT-Su-0qQ"/>
@@ -217,31 +217,40 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="iKw-di-ka1">
-                                        <rect key="frame" x="74" y="281" width="126" height="106"/>
+                                        <rect key="frame" x="5" y="281" width="259" height="106"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I7W-SX-FT4">
-                                                <rect key="frame" x="0.0" y="0.0" width="126" height="32"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="259" height="32"/>
                                                 <color key="backgroundColor" red="1" green="0.088567379639999999" blue="0.19609380370000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
                                                 <state key="normal" title="Absolutely love it!">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <segue destination="qsx-mS-OJN" kind="unwind" identifier="great" unwindAction="rateingButtonTappedWithSegue:" id="Jqt-Ls-mnJ"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fL8-ZT-hT7">
-                                                <rect key="frame" x="0.0" y="37" width="126" height="32"/>
+                                                <rect key="frame" x="0.0" y="37" width="259" height="32"/>
                                                 <color key="backgroundColor" red="1" green="0.088567379639999999" blue="0.19609380370000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
                                                 <state key="normal" title="Good">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <segue destination="qsx-mS-OJN" kind="unwind" identifier="good" unwindAction="rateingButtonTappedWithSegue:" id="68O-f1-Zlx"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IEW-qW-xI7">
-                                                <rect key="frame" x="0.0" y="74" width="126" height="32"/>
+                                                <rect key="frame" x="0.0" y="74" width="259" height="32"/>
                                                 <color key="backgroundColor" red="1" green="0.088567379639999999" blue="0.19609380370000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
                                                 <state key="normal" title="I don't like it">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <segue destination="qsx-mS-OJN" kind="unwind" identifier="dislike" unwindAction="rateingButtonTappedWithSegue:" id="DNa-zL-cUu"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -262,8 +271,9 @@
                                     <constraint firstItem="iKw-di-ka1" firstAttribute="top" secondItem="tci-bt-Mnr" secondAttribute="bottom" constant="8" id="Ez5-7I-Wuv"/>
                                     <constraint firstAttribute="trailing" secondItem="tci-bt-Mnr" secondAttribute="trailing" constant="8" id="JNK-0U-Dqk"/>
                                     <constraint firstItem="iKw-di-ka1" firstAttribute="top" secondItem="tci-bt-Mnr" secondAttribute="bottom" constant="8" id="MWg-st-rZX"/>
+                                    <constraint firstAttribute="trailing" secondItem="iKw-di-ka1" secondAttribute="trailing" constant="5" id="Qsv-XA-R0A"/>
                                     <constraint firstItem="Vne-XB-gTs" firstAttribute="top" secondItem="2kY-3N-8AA" secondAttribute="top" id="RM0-Wa-92l"/>
-                                    <constraint firstItem="iKw-di-ka1" firstAttribute="leading" secondItem="2kY-3N-8AA" secondAttribute="leading" constant="74" id="UKc-6u-lML"/>
+                                    <constraint firstItem="iKw-di-ka1" firstAttribute="leading" secondItem="2kY-3N-8AA" secondAttribute="leading" constant="5" id="UKc-6u-lML"/>
                                     <constraint firstItem="tci-bt-Mnr" firstAttribute="top" secondItem="Vne-XB-gTs" secondAttribute="bottom" constant="8" id="ZN2-t0-n9U"/>
                                     <constraint firstAttribute="trailing" secondItem="Vne-XB-gTs" secondAttribute="trailing" id="aBR-3j-uDY"/>
                                     <constraint firstItem="tci-bt-Mnr" firstAttribute="leading" secondItem="2kY-3N-8AA" secondAttribute="leading" constant="8" id="fKK-8v-5jb"/>
@@ -287,6 +297,12 @@
                             <constraint firstAttribute="trailing" secondItem="2kY-3N-8AA" secondAttribute="trailing" constant="53" id="zGv-KX-Ztb"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="backgroundImageView" destination="2rt-KA-JaS" id="d5o-Gx-bb2"/>
+                        <outlet property="closeButton" destination="1uU-KG-CVQ" id="OdK-LN-Tqy"/>
+                        <outlet property="containerView" destination="2kY-3N-8AA" id="N33-GW-77H"/>
+                        <outlet property="imageView" destination="Vne-XB-gTs" id="rg0-ml-KFr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6lm-Ql-oab" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="qsx-mS-OJN" userLabel="Exit" sceneMemberID="exit"/>
