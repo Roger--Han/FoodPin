@@ -26,6 +26,15 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
         
         title = restaurant.name
         
+        navigationController?.hidesBarsOnSwipe = false
+        tableView.estimatedRowHeight = 36.0
+        tableView.rowHeight = UITableViewAutomaticDimension
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.hidesBarsOnSwipe = false
+        navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
