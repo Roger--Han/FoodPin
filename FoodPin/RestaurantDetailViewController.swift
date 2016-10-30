@@ -67,6 +67,12 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
         
         return cell
     }
+    
+    // unwind segue action, back to the restaurant detail view controller
+    
+    @IBAction func close(segue:UIStoryboardSegue) {
+    
+    }
 
 
     override func didReceiveMemoryWarning() {
