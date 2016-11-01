@@ -17,7 +17,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        mapView.delegate = self
+    
 
         // Do any additional setup after loading the view.
         
@@ -42,9 +42,16 @@ class MapViewController: UIViewController, MKMapViewDelegate {
                     // Display the annotation
                     self.mapView.showAnnotations([annotation], animated: true)
                     self.mapView.selectAnnotation(annotation, animated: true)
+                    
                 }
             }
         })
+        
+        mapView.delegate = self
+        mapView.showsCompass = true
+        mapView.showsScale = true
+        mapView.showsTraffic = true
+        
         
         
     }
