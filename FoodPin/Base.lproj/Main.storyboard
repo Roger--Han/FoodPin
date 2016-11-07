@@ -102,19 +102,19 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="36" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6Qa-9J-exH">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <imageView key="tableHeaderView" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="bFJ-Jo-HXS">
-                                    <rect key="frame" x="0.0" y="64" width="1000" height="300"/>
+                                    <rect key="frame" x="0.0" y="64" width="375" height="300"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 </imageView>
                                 <mapView key="tableFooterView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" zoomEnabled="NO" scrollEnabled="NO" rotateEnabled="NO" pitchEnabled="NO" id="fQx-uy-0NG">
-                                    <rect key="frame" x="0.0" y="428" width="1000" height="135"/>
+                                    <rect key="frame" x="0.0" y="428" width="375" height="135"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 </mapView>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="36" id="C5S-OG-fcI" customClass="RestaurantDetailTablewViewCell" customModule="FoodPin" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="392" width="1000" height="36"/>
+                                        <rect key="frame" x="0.0" y="392" width="375" height="36"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="C5S-OG-fcI" id="r8c-ox-WbJ">
-                                            <frame key="frameInset" width="1000" height="35"/>
+                                            <frame key="frameInset" width="375" height="35"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ftZ-KK-0cM">
@@ -394,6 +394,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="photoImageView" destination="XSh-Pe-snu" id="Z0k-6u-AXU"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G3H-M7-VYr" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="sOb-B2-j8g" userLabel="Exit" sceneMemberID="exit"/>
