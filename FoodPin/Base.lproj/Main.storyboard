@@ -393,9 +393,19 @@
                                 <segue destination="sOb-B2-j8g" kind="unwind" unwindAction="unwindToHomeScreenWithSegue:" id="QLh-Mn-Ra6"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="RMA-ed-OpX">
+                            <connections>
+                                <action selector="saveButton:" destination="0xZ-Bm-p1Z" id="lWQ-sj-rac"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="locationTextField" destination="dnn-zU-Tox" id="Ay5-1h-tiS"/>
+                        <outlet property="nameTextField" destination="FmM-nS-JNg" id="9QL-j4-MjL"/>
+                        <outlet property="noButton" destination="kAZ-sj-Vbp" id="Lgg-2u-rhG"/>
                         <outlet property="photoImageView" destination="XSh-Pe-snu" id="Z0k-6u-AXU"/>
+                        <outlet property="typeTextField" destination="XBI-DE-IVg" id="RbS-96-4u6"/>
+                        <outlet property="yesButton" destination="vrN-zm-a8j" id="rtI-Ul-ALV"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G3H-M7-VYr" userLabel="First Responder" sceneMemberID="firstResponder"/>
