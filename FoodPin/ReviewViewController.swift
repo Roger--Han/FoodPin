@@ -15,7 +15,7 @@ class ReviewViewController: UIViewController {
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var closeButton: UIButton!
     
-    var restaurant: Restaurant!
+    var restaurant: RestaurantMO!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +30,7 @@ class ReviewViewController: UIViewController {
         backgroundImageView.addSubview(blurEffectView)
         
        
-        imageView.image = UIImage(named: restaurant.image)
+        imageView.image = UIImage(data: restaurant.image as! Data)
         // Add the transition animation to the containerView
         
         // View animation
