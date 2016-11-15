@@ -124,6 +124,7 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
     @IBAction func rateingButtonTapped(segue: UIStoryboardSegue) {
     
         if let rating = segue.identifier {
+            
             restaurant.isVisited = true
             
             switch rating {
@@ -137,6 +138,11 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
                 break
             }
         }
+        
+        if let appDelegate = (UIApplication.shared.delegate as? AppDelegate) {
+            appDelegate.saveContext()
+        }
+        
         tableView.reloadData()
     }
     
