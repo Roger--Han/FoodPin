@@ -12,11 +12,17 @@ import CoreData
 class RestaurantTableViewController: UITableViewController, NSFetchedResultsControllerDelegate {
     
     var restaurants:[RestaurantMO] = []
+    var searchController: UISearchController!
     
     var fetchResultController: NSFetchedResultsController<RestaurantMO>!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Enable the search bar 
+        searchController = UISearchController(searchResultsController: nil)
+        tableView.tableHeaderView = searchController.searchBar
         
         // Remove the title of the back button
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
