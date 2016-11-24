@@ -340,7 +340,7 @@
                                         <rect key="frame" x="0.0" y="530" width="375" height="72"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XG7-ED-4y9" id="akJ-md-0vh">
-                                            <frame key="frameInset" width="375" height="71"/>
+                                            <frame key="frameInset" width="375" height="72"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PHONE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RUA-q4-hYW">
@@ -555,6 +555,67 @@
                 <exit id="qsx-mS-OJN" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2214" y="29"/>
+        </scene>
+        <!--Wakthrough Page View Controller-->
+        <scene sceneID="0fY-gk-Idz">
+            <objects>
+                <pageViewController storyboardIdentifier="WalkthroughController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="FgC-hC-oud" customClass="WakthroughPageViewController" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="845-nD-FqL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-130" y="-677"/>
+        </scene>
+        <!--Walkthrough Content View Controller-->
+        <scene sceneID="aoI-Ly-dDx">
+            <objects>
+                <viewController storyboardIdentifier="WalkthroughContentViewController" id="QSG-Zu-WZ0" customClass="WalkthroughContentViewController" customModule="FoodPin" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Lfo-t9-XmD"/>
+                        <viewControllerLayoutGuide type="bottom" id="3zf-yT-EW2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vFA-Zb-oHV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Personalize" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HCy-CD-KFH">
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="28"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UZc-66-ep1">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="232" id="l2s-pu-ex3"/>
+                                    <constraint firstAttribute="width" constant="300" id="ncE-Fg-r24"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pin your favorite restaurants and create your own food guide" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zvy-7U-dbX">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="282" id="Cwk-IV-Qqd"/>
+                                    <constraint firstAttribute="height" constant="64" id="Hmv-ri-JJO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.75294117647058822" green="0.22352941176470587" blue="0.16862745098039217" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="HCy-CD-KFH" firstAttribute="top" secondItem="Lfo-t9-XmD" secondAttribute="bottom" constant="8" id="D0h-5t-e2C"/>
+                            <constraint firstItem="HCy-CD-KFH" firstAttribute="centerX" secondItem="vFA-Zb-oHV" secondAttribute="centerX" id="fZP-5L-PrU"/>
+                            <constraint firstItem="UZc-66-ep1" firstAttribute="top" secondItem="HCy-CD-KFH" secondAttribute="bottom" constant="21.5" id="gkd-hC-qYs"/>
+                            <constraint firstItem="Zvy-7U-dbX" firstAttribute="centerX" secondItem="vFA-Zb-oHV" secondAttribute="centerX" id="k9d-Rg-nxt"/>
+                            <constraint firstItem="UZc-66-ep1" firstAttribute="centerX" secondItem="vFA-Zb-oHV" secondAttribute="centerX" id="lKS-GN-g3E"/>
+                            <constraint firstItem="Zvy-7U-dbX" firstAttribute="top" secondItem="UZc-66-ep1" secondAttribute="bottom" constant="32" id="zms-7k-6iD"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="contentImageView" destination="UZc-66-ep1" id="CFA-i9-Pk2"/>
+                        <outlet property="contentLabel" destination="Zvy-7U-dbX" id="HtM-l0-Hh5"/>
+                        <outlet property="headingLabel" destination="HCy-CD-KFH" id="FFc-1q-58l"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h4A-K8-qdd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="607.20000000000005" y="-678.71064467766121"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="iyU-xe-RiD">

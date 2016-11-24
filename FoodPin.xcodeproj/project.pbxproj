@@ -10,6 +10,8 @@
 		61277D8D1DD96ECC002FBFDB /* FoodPin.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 61277D8B1DD96ECC002FBFDB /* FoodPin.xcdatamodeld */; };
 		61300CF81DC70D4A00FB312C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61300CF71DC70D4A00FB312C /* MapKit.framework */; };
 		616136AB1DD039FF001C07CA /* AddRestaurantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616136AA1DD039FF001C07CA /* AddRestaurantController.swift */; };
+		6186A7F91DE650E400A66EC8 /* WalkthroughContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6186A7F81DE650E400A66EC8 /* WalkthroughContentViewController.swift */; };
+		6186A7FB1DE6742800A66EC8 /* WalkthroughPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6186A7FA1DE6742800A66EC8 /* WalkthroughPageViewController.swift */; };
 		61D16A2E1DC04EB500716398 /* RestaurantDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D16A2D1DC04EB400716398 /* RestaurantDetailViewController.swift */; };
 		DB8187E31DBCCBA700932FA1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8187E21DBCCBA700932FA1 /* AppDelegate.swift */; };
 		DB8187E81DBCCBA700932FA1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB8187E61DBCCBA700932FA1 /* Main.storyboard */; };
@@ -27,6 +29,8 @@
 		61277D8C1DD96ECC002FBFDB /* FoodPin.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FoodPin.xcdatamodel; sourceTree = "<group>"; };
 		61300CF71DC70D4A00FB312C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		616136AA1DD039FF001C07CA /* AddRestaurantController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddRestaurantController.swift; sourceTree = "<group>"; };
+		6186A7F81DE650E400A66EC8 /* WalkthroughContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkthroughContentViewController.swift; sourceTree = "<group>"; };
+		6186A7FA1DE6742800A66EC8 /* WalkthroughPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkthroughPageViewController.swift; sourceTree = "<group>"; };
 		61D16A2D1DC04EB400716398 /* RestaurantDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantDetailViewController.swift; sourceTree = "<group>"; };
 		DB8187DF1DBCCBA600932FA1 /* FoodPin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodPin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB8187E21DBCCBA700932FA1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -91,6 +95,8 @@
 				DBC7E9EA1DC75211008FEEFE /* MapViewController.swift */,
 				DBE0AA021DC0BE56008D36C7 /* RestaurantDetailTablewViewCell.swift */,
 				616136AA1DD039FF001C07CA /* AddRestaurantController.swift */,
+				6186A7F81DE650E400A66EC8 /* WalkthroughContentViewController.swift */,
+				6186A7FA1DE6742800A66EC8 /* WalkthroughPageViewController.swift */,
 				DB8187E01DBCCBA600932FA1 /* Products */,
 				DB8187E61DBCCBA700932FA1 /* Main.storyboard */,
 				DB8187E91DBCCBA700932FA1 /* Assets.xcassets */,
@@ -179,10 +185,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				616136AB1DD039FF001C07CA /* AddRestaurantController.swift in Sources */,
+				6186A7FB1DE6742800A66EC8 /* WalkthroughPageViewController.swift in Sources */,
 				DBE0AA011DC0B04A008D36C7 /* Restaurant.swift in Sources */,
 				DB8187F51DBCCC1700932FA1 /* RestaurantTableViewController.swift in Sources */,
 				DBC7E9E91DC5F2E0008FEEFE /* ReviewViewController.swift in Sources */,
 				DB8187F71DBCD7FB00932FA1 /* RestaurantTableViewCell.swift in Sources */,
+				6186A7F91DE650E400A66EC8 /* WalkthroughContentViewController.swift in Sources */,
 				61277D8D1DD96ECC002FBFDB /* FoodPin.xcdatamodeld in Sources */,
 				61D16A2E1DC04EB500716398 /* RestaurantDetailViewController.swift in Sources */,
 				DB8187E31DBCCBA700932FA1 /* AppDelegate.swift in Sources */,

@@ -66,6 +66,17 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
         }
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        
+        if let pageViewController = storyboard?.instantiateViewController(withIdentifier: "WalkthroughController") as? WalkthroughPageViewController {
+        
+            present(pageViewController, animated: true, completion: nil)
+        }
+    
+    
+    
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -187,6 +198,19 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
         }
     }
     
+    // Buit-in method filter for filtering an existing array
+    func filterContent(for searchText: String) {
+        searchResults = restaurants.filter({ (restaurant) -> Bool in
+            
+            if let name = restaurant.name, let location = restaurant.location {
+                let isMatch = name.localizedCaseInsensitiveContains(searchText) || location.localizedCaseInsensitiveContains(searchText)
+                return isMatch
+            }
+            
+            return false
+        })
+    }
+    
     
     // MARK: Unwind Segues
     
@@ -194,18 +218,7 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
         
     }
     
-    // Buit-in method filter for filtering an existing array
-    func filterContent(for searchText: String) {
-        searchResults = restaurants.filter({ (restaurant) -> Bool in
-            
-            if let name = restaurant.name {
-                let isMatch = name.localizedCaseInsensitiveContains(searchText)
-                return isMatch
-            }
-        
-            return false
-        })
-    }
+    
     
     // MARK: NSFetchedResultsControllerDelegate
     
