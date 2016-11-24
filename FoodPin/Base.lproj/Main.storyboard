@@ -556,13 +556,13 @@
             </objects>
             <point key="canvasLocation" x="2214" y="29"/>
         </scene>
-        <!--Wakthrough Page View Controller-->
+        <!--Walkthrough Page View Controller-->
         <scene sceneID="0fY-gk-Idz">
             <objects>
-                <pageViewController storyboardIdentifier="WalkthroughController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="FgC-hC-oud" customClass="WakthroughPageViewController" sceneMemberID="viewController"/>
+                <pageViewController storyboardIdentifier="WalkthroughController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="FgC-hC-oud" customClass="WalkthroughPageViewController" customModule="FoodPin" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="845-nD-FqL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-130" y="-677"/>
+            <point key="canvasLocation" x="-28" y="-679"/>
         </scene>
         <!--Walkthrough Content View Controller-->
         <scene sceneID="aoI-Ly-dDx">

@@ -12,29 +12,14 @@ import CoreData
 class RestaurantTableViewController: UITableViewController, NSFetchedResultsControllerDelegate, UISearchResultsUpdating {
     
     var restaurants:[RestaurantMO] = []
-    var searchResults:[RestaurantMO] = []
-    var searchController: UISearchController!
     
     var fetchResultController: NSFetchedResultsController<RestaurantMO>!
-
+    
+    var searchController: UISearchController!
+    var searchResults:[RestaurantMO] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Enable the search bar 
-        searchController = UISearchController(searchResultsController: nil)
-        tableView.tableHeaderView = searchController.searchBar
-        
-        searchController.searchResultsUpdater = self
-        searchController.dimsBackgroundDuringPresentation = false
-        
-        // Customize the search bar
-        
-        searchController.searchBar.placeholder = "Search restaurants..."
-        searchController.searchBar.tintColor = UIColor.white
-        searchController.searchBar.barTintColor = UIColor(red: 218.0/255.0, green:
-            100.0/255.0, blue: 70.0/255.0, alpha: 1.0)
-//        searchController.searchBar.barStyle = .blackOpaque
         
         // Remove the title of the back button
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
@@ -64,23 +49,34 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
                 print(error)
             }
         }
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
         
-        if let pageViewController = storyboard?.instantiateViewController(withIdentifier: "WalkthroughController") as? WalkthroughPageViewController {
-        
-            present(pageViewController, animated: true, completion: nil)
-        }
-    
-    
-    
+        // Add a search bar
+        searchController = UISearchController(searchResultsController: nil)
+        tableView.tableHeaderView = searchController.searchBar
+        searchController.searchResultsUpdater = self
+        searchController.dimsBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = "Search restaurants..."
+        searchController.searchBar.tintColor = UIColor.white
+        searchController.searchBar.barTintColor = UIColor(red: 236.0/255.0, green: 236.0/255.0, blue: 236.0/255.0, alpha: 1.0)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         navigationController?.hidesBarsOnSwipe = true
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        if UserDefaults.standard.bool(forKey: "hasViewedWalkthrough") {
+            return
+        }
+        
+        if let pageViewController = storyboard?.instantiateViewController(withIdentifier: "WalkthroughController") as? WalkthroughPageViewController {
+            
+            present(pageViewController, animated: true, completion: nil)
+        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -95,14 +91,11 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
         if searchController.isActive {
-        
             return searchResults.count
         } else {
             return restaurants.count
         }
-        
     }
     
     
@@ -114,7 +107,6 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
         // Determine if we get the restaurant from search result or the original array
         let restaurant = (searchController.isActive) ? searchResults[indexPath.row] : restaurants[indexPath.row]
         
-        
         // Configure the cell...
         cell.nameLabel.text = restaurant.name
         cell.thumbnailImageView.image = UIImage(data: restaurant.image as! Data)
@@ -124,14 +116,6 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
         cell.accessoryType = restaurant.isVisited ? .checkmark : .none
         
         return cell
-    }
-    
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        if searchController.isActive {
-            return false
-        } else {
-            return true
-        }
     }
     
     
@@ -146,7 +130,6 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
     }
     
     override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
-        
         
         // Social Sharing Button
         let shareAction = UITableViewRowAction(style: UITableViewRowActionStyle.default, title: "Share", handler: { (action, indexPath) -> Void in
@@ -178,47 +161,30 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
         return [deleteAction, shareAction]
     }
     
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        if searchController.isActive {
+            return false
+        } else {
+            return true
+        }
+    }
+    
     // MARK: -
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showRestaurantDetail" {
             if let indexPath = tableView.indexPathForSelectedRow {
                 let destinationController = segue.destination as! RestaurantDetailViewController
-                destinationController.restaurant = (searchController.isActive) ?
-                    searchResults[indexPath.row] : restaurants[indexPath.row]
+                destinationController.restaurant = (searchController.isActive) ? searchResults[indexPath.row] : restaurants[indexPath.row]
             }
         }
     }
-    
-    // MARK: UISearchResultsUpdating
-    func updateSearchResults(for searchController: UISearchController) {
-        if let searchText = searchController.searchBar.text {
-            filterContent(for: searchText)
-            tableView.reloadData()
-        }
-    }
-    
-    // Buit-in method filter for filtering an existing array
-    func filterContent(for searchText: String) {
-        searchResults = restaurants.filter({ (restaurant) -> Bool in
-            
-            if let name = restaurant.name, let location = restaurant.location {
-                let isMatch = name.localizedCaseInsensitiveContains(searchText) || location.localizedCaseInsensitiveContains(searchText)
-                return isMatch
-            }
-            
-            return false
-        })
-    }
-    
     
     // MARK: Unwind Segues
     
     @IBAction func unwindToHomeScreen(segue:UIStoryboardSegue) {
         
     }
-    
-    
     
     // MARK: NSFetchedResultsControllerDelegate
     
@@ -254,5 +220,24 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
         tableView.endUpdates()
     }
     
+    // MARK: - Search Controller
+    
+    func filterContent(for searchText: String) {
+        searchResults = restaurants.filter({ (restaurant) -> Bool in
+            if let name = restaurant.name, let location = restaurant.location {
+                let isMatch = name.localizedCaseInsensitiveContains(searchText) || location.localizedCaseInsensitiveContains(searchText)
+                return isMatch
+            }
+            
+            return false
+        })
+    }
+    
+    func updateSearchResults(for searchController: UISearchController) {
+        if let searchText = searchController.searchBar.text {
+            filterContent(for: searchText)
+            tableView.reloadData()
+        }
+    }
     
 }
