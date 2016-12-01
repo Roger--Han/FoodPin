@@ -102,19 +102,19 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="36" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6Qa-9J-exH">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <imageView key="tableHeaderView" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="bFJ-Jo-HXS">
-                                    <rect key="frame" x="0.0" y="64" width="375" height="300"/>
+                                    <rect key="frame" x="0.0" y="64" width="1000" height="300"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 </imageView>
                                 <mapView key="tableFooterView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" zoomEnabled="NO" scrollEnabled="NO" rotateEnabled="NO" pitchEnabled="NO" id="fQx-uy-0NG">
-                                    <rect key="frame" x="0.0" y="428" width="375" height="135"/>
+                                    <rect key="frame" x="0.0" y="428" width="1000" height="135"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 </mapView>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="36" id="C5S-OG-fcI" customClass="RestaurantDetailTablewViewCell" customModule="FoodPin" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="392" width="375" height="36"/>
+                                        <rect key="frame" x="0.0" y="392" width="1000" height="36"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="C5S-OG-fcI" id="r8c-ox-WbJ">
-                                            <frame key="frameInset" width="375" height="36"/>
+                                            <frame key="frameInset" width="1000" height="36"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ftZ-KK-0cM">
@@ -596,10 +596,23 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="s1N-9a-rge"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s8b-ji-PbO">
+                                <frame key="frameInset" minX="313" minY="625" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="nextButtonTappedWithSender:" destination="QSG-Zu-WZ0" eventType="touchUpInside" id="eCp-Pl-T8b"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.75294117647058822" green="0.22352941176470587" blue="0.16862745098039217" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="HCy-CD-KFH" firstAttribute="top" secondItem="Lfo-t9-XmD" secondAttribute="bottom" constant="8" id="D0h-5t-e2C"/>
+                            <constraint firstItem="s1N-9a-rge" firstAttribute="centerX" secondItem="vFA-Zb-oHV" secondAttribute="centerX" id="PuA-9n-Yzn"/>
+                            <constraint firstItem="3zf-yT-EW2" firstAttribute="top" secondItem="s1N-9a-rge" secondAttribute="bottom" constant="8" id="ehj-Uh-IO2"/>
                             <constraint firstItem="HCy-CD-KFH" firstAttribute="centerX" secondItem="vFA-Zb-oHV" secondAttribute="centerX" id="fZP-5L-PrU"/>
                             <constraint firstItem="UZc-66-ep1" firstAttribute="top" secondItem="HCy-CD-KFH" secondAttribute="bottom" constant="21.5" id="gkd-hC-qYs"/>
                             <constraint firstItem="Zvy-7U-dbX" firstAttribute="centerX" secondItem="vFA-Zb-oHV" secondAttribute="centerX" id="k9d-Rg-nxt"/>
@@ -610,7 +623,9 @@
                     <connections>
                         <outlet property="contentImageView" destination="UZc-66-ep1" id="CFA-i9-Pk2"/>
                         <outlet property="contentLabel" destination="Zvy-7U-dbX" id="HtM-l0-Hh5"/>
+                        <outlet property="forwardButton" destination="s8b-ji-PbO" id="atL-cc-czs"/>
                         <outlet property="headingLabel" destination="HCy-CD-KFH" id="FFc-1q-58l"/>
+                        <outlet property="pageControl" destination="s1N-9a-rge" id="FEi-KT-74y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h4A-K8-qdd" userLabel="First Responder" sceneMemberID="firstResponder"/>
