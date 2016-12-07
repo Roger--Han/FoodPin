@@ -21,7 +21,7 @@
                                 <rect key="frame" x="0.0" y="92" width="375" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pJ3-P9-tYq" id="63K-T9-62G">
-                                    <frame key="frameInset" width="375" height="80"/>
+                                    <frame key="frameInset" width="375" height="79"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="V8Y-ev-3Kf">
@@ -114,7 +114,7 @@
                                         <rect key="frame" x="0.0" y="392" width="375" height="36"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="C5S-OG-fcI" id="r8c-ox-WbJ">
-                                            <frame key="frameInset" width="375" height="36"/>
+                                            <frame key="frameInset" width="375" height="35"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ftZ-KK-0cM">
@@ -232,7 +232,7 @@
                                         <rect key="frame" x="0.0" y="64" width="375" height="250"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Pxr-IC-pDW" id="JNf-nL-aI8">
-                                            <frame key="frameInset" width="375" height="250"/>
+                                            <frame key="frameInset" width="375" height="249"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photoalbum" translatesAutoresizingMaskIntoConstraints="NO" id="XSh-Pe-snu">
@@ -253,7 +253,7 @@
                                         <rect key="frame" x="0.0" y="314" width="375" height="72"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tE5-1x-mln" id="8yh-t6-SiF">
-                                            <frame key="frameInset" width="375" height="72"/>
+                                            <frame key="frameInset" width="375" height="71"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qaT-J7-Mzt">
@@ -282,7 +282,7 @@
                                         <rect key="frame" x="0.0" y="386" width="375" height="72"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OFT-gj-MvU" id="BhN-dg-yxP">
-                                            <frame key="frameInset" width="375" height="72"/>
+                                            <frame key="frameInset" width="375" height="71"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TYPE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iRh-IF-um4">
@@ -311,7 +311,7 @@
                                         <rect key="frame" x="0.0" y="458" width="375" height="72"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dVN-XC-uTe" id="xrw-jT-a9j">
-                                            <frame key="frameInset" width="375" height="72"/>
+                                            <frame key="frameInset" width="375" height="71"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LOCATION" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cpL-lM-Frp">
@@ -340,7 +340,7 @@
                                         <rect key="frame" x="0.0" y="530" width="375" height="72"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XG7-ED-4y9" id="akJ-md-0vh">
-                                            <frame key="frameInset" width="375" height="72"/>
+                                            <frame key="frameInset" width="375" height="71"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PHONE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RUA-q4-hYW">
@@ -369,7 +369,7 @@
                                         <rect key="frame" x="0.0" y="602" width="375" height="72"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Daz-c9-kWy" id="S5G-1W-Yuk">
-                                            <frame key="frameInset" width="375" height="72"/>
+                                            <frame key="frameInset" width="375" height="71"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Have You Been Here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PAm-5r-vcM">
@@ -632,11 +632,11 @@
             </objects>
             <point key="canvasLocation" x="607.20000000000005" y="-678.71064467766121"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Favourite-->
         <scene sceneID="iyU-xe-RiD">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lyI-qS-Nfd" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="favorites" id="HE2-at-dHP"/>
+                    <tabBarItem key="tabBarItem" title="Favourite" image="favorite" id="HE2-at-dHP"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="lp4-7I-CG6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -680,11 +680,11 @@
             </objects>
             <point key="canvasLocation" x="721" y="726"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Discover-->
         <scene sceneID="VCy-7p-Dym">
             <objects>
                 <navigationController id="x2H-PV-j1P" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="recents" id="CIU-XR-P7b"/>
+                    <tabBarItem key="tabBarItem" title="Discover" image="discover" id="CIU-XR-P7b"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="wdi-UQ-wOz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -726,11 +726,11 @@
             </objects>
             <point key="canvasLocation" x="671" y="1500"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--About-->
         <scene sceneID="qMt-Ti-H78">
             <objects>
                 <navigationController id="hhr-8b-wpM" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="more" id="JYs-wO-ZGv"/>
+                    <tabBarItem key="tabBarItem" title="About" image="about" id="JYs-wO-ZGv"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="knm-hj-M9I">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -767,6 +767,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="F0y-1a-5Kn" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="1Lb-bA-C4Y">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
@@ -782,10 +783,13 @@
         </scene>
     </scenes>
     <resources>
+        <image name="about" width="23" height="22"/>
         <image name="barrafina" width="448" height="448"/>
         <image name="cafeloisl" width="448" height="448"/>
         <image name="check" width="28" height="28"/>
         <image name="cross" width="24" height="24"/>
+        <image name="discover" width="25" height="19"/>
+        <image name="favorite" width="17" height="25"/>
         <image name="photoalbum" width="64" height="64"/>
     </resources>
 </document>
