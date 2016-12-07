@@ -23,8 +23,7 @@ class WalkthroughContentViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
+
         headingLabel.text  = heading
         contentLabel.text = content
         contentImageView.image = UIImage(named: imageFile)
@@ -52,10 +51,11 @@ class WalkthroughContentViewController: UIViewController {
     @IBAction func nextButtonTapped(sender: UIButton) {
         
         switch index {
-        case 0...1:
+        case 0...1: // Next Button
             let pageViewController = parent as! WalkthroughPageViewController
             pageViewController.forward(index: index)
-        case 2:
+        case 2: // Done Button
+            UserDefaults.standard.set(true, forKey: "hasViewedWalkthrough")
             dismiss(animated: true, completion: nil)
         default:
             break
