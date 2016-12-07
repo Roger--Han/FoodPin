@@ -10,6 +10,8 @@
 		61277D8D1DD96ECC002FBFDB /* FoodPin.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 61277D8B1DD96ECC002FBFDB /* FoodPin.xcdatamodeld */; };
 		61300CF81DC70D4A00FB312C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61300CF71DC70D4A00FB312C /* MapKit.framework */; };
 		616136AB1DD039FF001C07CA /* AddRestaurantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616136AA1DD039FF001C07CA /* AddRestaurantController.swift */; };
+		6165D8A21DF8BFDC004CF1BE /* about.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6165D8A01DF8BFDC004CF1BE /* about.storyboard */; };
+		6165D8A41DF8BFFE004CF1BE /* discover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6165D8A31DF8BFFE004CF1BE /* discover.storyboard */; };
 		6186A7F91DE650E400A66EC8 /* WalkthroughContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6186A7F81DE650E400A66EC8 /* WalkthroughContentViewController.swift */; };
 		6186A7FB1DE6742800A66EC8 /* WalkthroughPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6186A7FA1DE6742800A66EC8 /* WalkthroughPageViewController.swift */; };
 		61D16A2E1DC04EB500716398 /* RestaurantDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D16A2D1DC04EB400716398 /* RestaurantDetailViewController.swift */; };
@@ -29,6 +31,8 @@
 		61277D8C1DD96ECC002FBFDB /* FoodPin.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FoodPin.xcdatamodel; sourceTree = "<group>"; };
 		61300CF71DC70D4A00FB312C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		616136AA1DD039FF001C07CA /* AddRestaurantController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddRestaurantController.swift; sourceTree = "<group>"; };
+		6165D8A11DF8BFDC004CF1BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/about.storyboard; sourceTree = "<group>"; };
+		6165D8A31DF8BFFE004CF1BE /* discover.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = discover.storyboard; sourceTree = "<group>"; };
 		6186A7F81DE650E400A66EC8 /* WalkthroughContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkthroughContentViewController.swift; sourceTree = "<group>"; };
 		6186A7FA1DE6742800A66EC8 /* WalkthroughPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkthroughPageViewController.swift; sourceTree = "<group>"; };
 		61D16A2D1DC04EB400716398 /* RestaurantDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantDetailViewController.swift; sourceTree = "<group>"; };
@@ -99,6 +103,8 @@
 				6186A7FA1DE6742800A66EC8 /* WalkthroughPageViewController.swift */,
 				DB8187E01DBCCBA600932FA1 /* Products */,
 				DB8187E61DBCCBA700932FA1 /* Main.storyboard */,
+				6165D8A31DF8BFFE004CF1BE /* discover.storyboard */,
+				6165D8A01DF8BFDC004CF1BE /* about.storyboard */,
 				DB8187E91DBCCBA700932FA1 /* Assets.xcassets */,
 				DB8187EB1DBCCBA700932FA1 /* LaunchScreen.storyboard */,
 				DB8187EE1DBCCBA700932FA1 /* Info.plist */,
@@ -173,6 +179,8 @@
 			files = (
 				DB8187ED1DBCCBA700932FA1 /* LaunchScreen.storyboard in Resources */,
 				DB8187EA1DBCCBA700932FA1 /* Assets.xcassets in Resources */,
+				6165D8A41DF8BFFE004CF1BE /* discover.storyboard in Resources */,
+				6165D8A21DF8BFDC004CF1BE /* about.storyboard in Resources */,
 				DB8187E81DBCCBA700932FA1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -202,6 +210,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		6165D8A01DF8BFDC004CF1BE /* about.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6165D8A11DF8BFDC004CF1BE /* Base */,
+			);
+			name = about.storyboard;
+			sourceTree = "<group>";
+		};
 		DB8187E61DBCCBA700932FA1 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
