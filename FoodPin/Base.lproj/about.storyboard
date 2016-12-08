@@ -43,10 +43,38 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="About" id="cC6-PA-SLh"/>
+                    <connections>
+                        <segue destination="apC-ny-bNg" kind="show" identifier="showWebView" id="4MG-Ig-t4b"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wZP-6C-0wZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-967" y="1767"/>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="3Wf-uP-UcI">
+            <objects>
+                <viewController id="apC-ny-bNg" customClass="WebViewController" customModule="FoodPin" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="era-lE-d24"/>
+                        <viewControllerLayoutGuide type="bottom" id="Vuz-XB-Y0u"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="h3V-fG-H9D">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xVW-Sg-TCr">
+                                <frame key="frameInset" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tHE-H3-5Qt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-127.2" y="1766.2668665667168"/>
         </scene>
         <!--About-->
         <scene sceneID="qMt-Ti-H78">

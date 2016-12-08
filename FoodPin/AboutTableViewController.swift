@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SafariServices
 
 class AboutTableViewController: UITableViewController {
     
@@ -64,6 +65,13 @@ class AboutTableViewController: UITableViewController {
                 if let url = URL(string: "http://www.apple.com/itunes/charts/paidapps/"){
                     UIApplication.shared.open(url)
                 }
+            } else if indexPath.row == 1 {
+                performSegue(withIdentifier: "showWebView", sender: self)
+            }
+        case 1:
+            if let url = URL(string: links[indexPath.row]) {
+                let safariController = SFSafariViewController(url: url)
+                present(safariController, animated: true, completion: nil)
             }
             
         default:
